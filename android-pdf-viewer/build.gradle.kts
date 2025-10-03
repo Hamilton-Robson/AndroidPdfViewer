@@ -11,7 +11,7 @@ plugins {
 val javaVersion: JvmTarget by rootProject.extra
 
 android {
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         namespace = "com.github.barteksc.pdfviewer"
