@@ -1,5 +1,6 @@
 import org.gradle.kotlin.dsl.get
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.gradle.api.JavaVersion
 
 plugins {
     alias(libs.plugins.kotlinAndroid)
@@ -19,8 +20,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17  
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlin {
