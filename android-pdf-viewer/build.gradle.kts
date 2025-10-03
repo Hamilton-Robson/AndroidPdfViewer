@@ -24,12 +24,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlin {
-        compilerOptions {
-            jvmTarget.set(javaVersion)
-        }
-    }
-
     publishing {
         singleVariant("release") {
             withSourcesJar()
@@ -37,9 +31,17 @@ android {
     }
 }
 
+kotlin {
+  jvmToolchain(17)               // ★ new — forces Kotlin to 17
+  compilerOptions {
+      jvmTarget.set(JvmTarget.JVM_17)
+  }
+}
+
+
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(javaVersion.target)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 
